@@ -1,17 +1,28 @@
 #Funktion för att tokenizea 
+
+#Tokenize WIP
 def tokenize(lines=[]):
     word_list = []
     for line in lines:
-        word = ""
-        for letter in line:
-            if(letter.isspace()):
-                word+=letter
-                print(letter)
-            else:
-                word_list.append(word)
-                word = ""
+        start = 0
+        while start < len(line):
+            #print(line[start])
+            if(line[start].isalpha() or line[start].isdigit()):
+                print(line[start])
+                end = start
+                while end < len(line) and line[end].isalpha()==line[start].isalpha():
+                    end+=1
+                print(line[start:end])
+                
+                word_list.append(line[start:end])
+                start=end
+
+
+            elif(not line[start].isspace()):
+                word_list.append(line[start])
+            start = start+1
             
-        word_list.append(word)
+
     return word_list
     
 
