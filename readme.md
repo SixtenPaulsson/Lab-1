@@ -16,7 +16,7 @@ Main filen, använder wordfreq.py för att skriva ut en lista på de mest använ
 Lista på stopwords
 
 ## `.gitignore`
-Gör så att __pycache__ inte blir pushad
+Gör så att `__pycache__` inte blir pushad
 
 ## `readme.md`
 Denna fil
