@@ -1,7 +1,7 @@
 # Labb 1
 Första labben inom kursen grundläggande programvaruutveckling
 
-## Wordfreq.py
+## `Wordfreq.py`
 * `Tokenize`
     Delar upp en text i ord
 * `countWords`
