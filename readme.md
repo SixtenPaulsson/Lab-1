@@ -2,18 +2,21 @@
 Första labben inom kursen grundläggande programvaruutveckling
 
 ## Wordfreq.py
-* Tokenize
+* `Tokenize`
     Delar upp en text i ord
-* countWords
+* `countWords`
     Räknar hur många av varje ord det är
-* printTopMost
+* `printTopMost`
     Skriver ut hur många av varje ord det är i ordning
 
-## Topmost.py
+## `Topmost.py`
 Main filen, använder wordfreq.py för att skriva ut en lista på de mest använda orden i en text
 
-## Eng_Stopwords.txt
+## `Eng_Stopwords.txt`
 Lista på stopwords
 
-## .gitignore
+## `.gitignore`
 Gör så att __pycache__ inte blir pushad
+
+## `readme.md`
+Denna fil
