@@ -1,6 +1,3 @@
-#Funktion för att tokenizea 
-
-#Tokenize WIP
 def tokenize(lines=[]):
     #Word list är listan på orden
     word_list = []
@@ -21,10 +18,12 @@ def tokenize(lines=[]):
             start += 1
     return word_list
 
-
 def countWords(word_list=[],stop_words=[]):
-    for stop_word in stop_words:
-        word_list=remove_items(word_list,stop_word)
+    #Tar bort stopwordsen från wordlist
+    for word in word_list:
+        if(word in stop_words):
+            word_list.remove(word)
+    #Slänger in orden i en dictionary
     counted_words={}
     for word in word_list:
         if counted_words.get(word) == None:
@@ -32,19 +31,10 @@ def countWords(word_list=[],stop_words=[]):
         counted_words[word] +=1
     return counted_words
 
-
-
-def remove_items(test_list, stopword): 
-    res = [i for i in test_list if i != stopword] 
-    return res 
-
-
 def printTopMost(counted_words={},printed_amount=0):
+    #Sorterar dicten
     sorted_list = sorted(counted_words.items(), key=lambda x: -x[1])
     for i in range(printed_amount):
         if(i==len(sorted_list)):
            break
         print(sorted_list[i][0].ljust(20)+str(sorted_list[i][1]).rjust(5))
-
-asd = open("eng_stopwords.txt",encoding="utf-8")
-stopwords=asd.read().split("\n")
