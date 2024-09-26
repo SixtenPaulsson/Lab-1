@@ -12,8 +12,6 @@ else:
     with open(sys.argv[2], encoding="utf-8") as inp_file:
         words = wordfreq.tokenize(inp_file)
 
-
-
 stopwords=open(sys.argv[1],encoding="utf-8").read().split("\n")
 counted_words = wordfreq.countWords(words,stopwords)
 wordfreq.printTopMost(counted_words,int(sys.argv[3]))

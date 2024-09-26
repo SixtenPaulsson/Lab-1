@@ -19,12 +19,12 @@ def tokenize(lines=[]):
     return word_list
 
 def countWords(word_list=[],stop_words=[]):
+    word_list = list(filter(lambda x: x not in stop_words, word_list))
     counted_words={}
     for word in word_list:
-        if(word not in stop_words):
-            if counted_words.get(word) == None:
-                counted_words[word]=0
-            counted_words[word] +=1
+        if counted_words.get(word) == None:
+            counted_words[word]=0
+        counted_words[word] +=1
     return counted_words
 
 def printTopMost(counted_words={},printed_amount=10):
