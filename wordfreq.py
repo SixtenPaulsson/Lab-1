@@ -19,19 +19,15 @@ def tokenize(lines=[]):
     return word_list
 
 def countWords(word_list=[],stop_words=[]):
-    #Tar bort stopwordsen från wordlist
-    for word in word_list:
-        if(word in stop_words):
-            word_list.remove(word)
-    #Slänger in orden i en dictionary
     counted_words={}
     for word in word_list:
-        if counted_words.get(word) == None:
-            counted_words[word]=0
-        counted_words[word] +=1
+        if(word not in stop_words):
+            if counted_words.get(word) == None:
+                counted_words[word]=0
+            counted_words[word] +=1
     return counted_words
 
-def printTopMost(counted_words={},printed_amount=0):
+def printTopMost(counted_words={},printed_amount=10):
     #Sorterar dicten
     sorted_list = sorted(counted_words.items(), key=lambda x: -x[1])
     for i in range(printed_amount):
