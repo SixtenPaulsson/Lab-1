@@ -14,3 +14,6 @@ Main filen, använder wordfreq.py för att skriva ut en lista på de mest använ
 
 ## Eng_Stopwords.txt
 Lista på stopwords
+
+## .gitignore
+Gör så att __pycache__ inte blir pushad
